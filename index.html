@@ -16,16 +16,16 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Asking questions to determine if the individual has a cold or allergies based on the symptoms
+Asking questions to determine if the individual has just a headache or possibly a concussion
  
 Known Issues:
-Asking about symptoms of eye irritation, a fever, sore throat, and whether the symptoms are seasonal or chronic
+Asking about symptoms of physical impairment, light sensitivity, amensia, and eye dilation which are characteristic to a concussion.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title>Cold or Allergies?</title>  
+      <title>Headache or Concussion?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -34,18 +34,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0; <!--variable to count the number of times an allergy symptom is counted, initial setting at zero-->
-        var cold_count = 0;
+        var headache_count = 0; <!--variable to count the number of times an allergy symptom is counted, initial setting at zero-->
+        var concussion_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1; <!--function that will actually count-->
-		alert(allergy_count);
+        function headacheAdd(){
+            headache_count = headache_count + 1; <!--function that will actually count-->
+		alert(headache_count);
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1; <!-- function counting number of times symptom for cold is selected-->
+        function concussionAdd(){
+            concussion_count = concussion_count + 1; <!-- function counting number of times symptom for cold is selected-->
         }
 	
 	<!-- function to compute the final percentages -->
@@ -53,10 +53,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- given line of code in instructions to display on correct page -->
 		var resultText = document.getElementById("results");
 	<!-- calculations to change the number into a percent -->
-		var allergyPercent = (allergy_count / 4) * 100;
-		var coldPercent = (cold_count / 4) * 100;
+		var headachePercent = (headache_count / 4) * 100;
+		var concussionPercent = (concussion_count / 4) * 100;
 	<!-- given line of code in indstructions to display probability -->
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		resultText.innerHTML = "Probability it is allergies =" + headachePercent + "<br> Probability it is a cold =" + concussionPercent; 
 		
 	}
 
@@ -87,12 +87,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot"> <!--header of the first page-->
-	<h1>Cold or Allergies?</h1> 
+	<h1>Headache or Concussion?</h1> 
 </div>
 	
 <!--introduction page--> 
 <div id="content" class="w3-container"> 
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--question asked on that page-->
+	<p>Are you thinking you just have a headache but are experiencing more severe symptoms? Answer a few short questions to find out if it is just a headache or you might have a concussion.</p> <!--question asked on that page-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--first "get started" button code-->
 	
@@ -108,12 +108,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container"> <!--page one question-->
-        	<p>Are your eyes watery or itchy.</p>    
+        	<p>Are you experiencing dizziness or any balance issues? </p>    
     	</div>
 	
 <!-- yes and no buttons-->  
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
+	<a href="#two"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#two"  onclick="headacheAdd();" class="w3-btn w3-black">No </a>
 
 </div>
 
@@ -124,11 +124,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!--page 2 question-->
-		<p>Do you have a fever?.</p>
+		<p> Are you feeling sensitive to light?</p>
 	</div>
 <!-- yes and no buttons-->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#three"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
+	<a href="#three"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#three"  onclick="headacheAdd();" class="w3-btn w3-black">No </a>
 </div>	
 	
 <!-- page three question three-->	
@@ -138,11 +138,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> <!--page 3 question-->
-		<p>Do you have a sore throat.</p>
+		<p>Are you experiencing any amnesia?</p>
 	</div>
 <!-- yes and no buttons-->
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#four"  onclick="alleryAdd();" class="w3-btn w3-black">No </a>
+	<a href="#four"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#four"  onclick="headacheAdd();" class="w3-btn w3-black">No </a>
 </div>	
 
 <!-- page three question three-->	
@@ -152,11 +152,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">   <!--page 4 question-->
-		<p>Are your symptoms seasonal?.</p>
+		<p>Are your eyes dilating?</p>
 	</div>
 <!-- yes and no buttons-->
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
+	<a href="#five"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#five"  onclick="headacheAdd();" class="w3-btn w3-black">No </a>
 </div>	
 	
 <!--results page -->
